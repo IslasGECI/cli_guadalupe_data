@@ -4,7 +4,7 @@ app = typer.Typer(help="Awesome CLI user manager.")
 
 
 @app.command()
-def main(name: str):
+def say_hi(name: str):
     print(f"Hello {name}")
 
 
