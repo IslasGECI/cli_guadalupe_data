@@ -9,7 +9,7 @@ classifiers = [ "License :: OSI Approved :: GNU General Public License v3 or lat
 description-file = "README.md"
 home-page = "https://github.com/IslasGECI/cli_guadalupe_data"
 module = "cli_for_tools"
-requires = ["typer"]
+requires = ["typer", "typer-cli"]
 requires-python=">=3.9"
 
 [tool.flit.scripts]
