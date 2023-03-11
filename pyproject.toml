@@ -11,3 +11,6 @@ home-page = "https://github.com/IslasGECI/cli_guadalupe_data"
 module = "cli_for_tools"
 requires = ["typer"]
 requires-python=">=3.9"
+
+[tool.flit.scripts]
+crea_tabla_pvalor = "cli_for_tools.example_hello:main"
