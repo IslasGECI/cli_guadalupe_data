@@ -14,7 +14,7 @@ all: check coverage mutants
 		tests
 
 module = cli_for_tools
-codecov_token = 6c56bccb-1758-4ed9-8161-97c845591c26
+codecov_token = 94c83a37-8c72-4de9-aa91-a094ce55b20b
 
 define lint
 	pylint \
