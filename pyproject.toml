@@ -13,4 +13,4 @@ requires = ["typer", "typer-cli"]
 requires-python=">=3.9"
 
 [tool.flit.scripts]
-crea_tabla_pvalor = "cli_for_tools.example_hello:main"
+crea_tabla_pvalor = "cli_for_tools.example_hello:app"
