@@ -10,4 +10,4 @@ def say_hi(name: str):
 
 @app.command()
 def good_bye(name: str = "Chato"):
-    print(f"adios {name}")
+    print(f"Good bye {name}")
