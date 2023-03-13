@@ -18,3 +18,9 @@ def say_hi(name: str):
 @app.command()
 def good_bye(name: str = "Chato"):
     print(f"Good bye {name}")
+
+
+@app.command()
+def haz_mapa_trampas_activas_e_inactivas():
+    command = ""
+    os.system(command)
