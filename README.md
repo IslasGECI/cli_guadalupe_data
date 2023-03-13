@@ -1,23 +1,31 @@
 <a href="https://www.islas.org.mx/"><img src="https://www.islas.org.mx/img/logo.svg" align="right" width="256" /></a>
 # Cli Guadalupe Data
 
-Este repositorio será la interfaz para las herramientas para los miembros del equipo de tramperos
+## `paco_el_chato`
+Paco el chato es el asistente para las tareas de gabinete en el proyecto de erradicación de gato
+feral en Isla Guadalupe.
 
-Para usar este repo como plantilla debemos hacer lo siguiente:
+Tiene tres habilidades:
+- clasificar fotos con gatos
+- generar un esbozo del mapa con trampas activas y desactivas de Isla Guadalupe
+- Actualizar la paquetería para hacr las tareas anteriores
 
-1. Presiona el botón verde que dice _Use this template_
-1. Selecciona como dueño a la organización IslasGECI
-1. Agrega el nombre del nuevo módulo de python
-1. Presiona el botón _Create repository from template_
-1. Reemplaza `dummy_transformations` por el nombre del nuevo módulo en:
-    - `Makefile`
-    - `pyproject.toml`
-    - `tests\test_transformations.py`
-1. Renombra el archivo `dummy_transformations\transformations.py` al nombre del primer archivo del
-   nuevo módulo
-1. Cambia la descripción del archivo `dummy_transformations\__init__.py`
-1. Renombra el directorio `dummy_transformations` al nombre del nuevo módulo
-1. Cambia el `codecov_token` del archivo `Makefile`
+## `haz-mapa`
+Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas.
+**Requerimiento**: En la carpeta de trabajo debe estar:
+- IG_POSICION_{fecha}.txt         : Archivo que obtenemos de mapsource
+- IG_POSICION_TRAMPAS_{fecha}.xlsx: Archivos con los esfuerzos de la semana
+Al final generará el archivo `map_of_traps.jpg`.
 
-Los archivos del nuevo módulo los agregarás en la carpeta que antes se llamaba
-`dummy_transformations` y las pruebas en la carpeta `tests`.
+## `clasifica-fotos`
+Clasifica las fotos que vienen de las trampas cámara. \n
+**Requerimiento**: En la carpeta de trabajo debe estar una carpeta (varias carpetas) con las fotos.
+El nombre de la carpeta principan debe ser sin espacios. Por ejemplo: \n
+- `FOTOS GATOS`: es un nombre incorrecto, \n
+- `FOTOS_GATOS`: es un nombre correcto. \n
+Al final generará una carpeta con las fotos en las que detectó gato.
+
+## `actualiza-comandos`
+Actualiza los comandos:
+- `haz-mapa`
+- `clasifica-fotos`
