@@ -10,6 +10,14 @@ Tiene tres habilidades:
 - generar un esbozo del mapa con trampas activas y desactivas de Isla Guadalupe
 - Actualizar la paquetería para hacr las tareas anteriores
 
+## Modo de uso
+Para utilizar `haz-mapa` o `clasifica-fotos` debemos abrir la terminal desde la carpeta de trabajo:
+1. damos doble _click_ a la carpeta de trabajo
+1. damos _click_ derecho al ratón y escogemos la opción **Open Terminal**
+1. escribimos el comando `paco_el_chato --help` y tendremos la ayuda general
+1. escribimos el comando `paco_el_chato haz-mapa --help` y tendremos la ayuda del comando `haz-mapa`
+1. escribimos el comando `paco_el_chato clasifica-fotos --help` y tendremos la ayuda del comando `clasifica-fotos`
+
 ## `haz-mapa`
 Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas.
 **Requerimiento**: En la carpeta de trabajo debe estar:
@@ -23,7 +31,7 @@ Clasifica las fotos que vienen de las trampas cámara. \n
 El nombre de la carpeta principan debe ser sin espacios. Por ejemplo: \n
 - `FOTOS GATOS`: es un nombre incorrecto, \n
 - `FOTOS_GATOS`: es un nombre correcto. \n
-Al final generará una carpeta con las fotos en las que detectó gato.
+Al final generará la carpeta `cat_detected` con las fotos en las que detectó gato.
 
 ## `actualiza-comandos`
 Actualiza los comandos:

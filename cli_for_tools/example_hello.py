@@ -74,7 +74,7 @@ def clasifica_fotos():
     El nombre de la carpeta principan debe ser sin espacios. Por ejemplo: \n
     - `FOTOS GATOS`: es un nombre incorrecto, \n
     - `FOTOS_GATOS`: es un nombre correcto. \n
-    Al final generará una carpeta con las fotos en las que detectó gato.
+    Al final generará la carpeta `cat_detected` con las fotos en las que detectó gato.
     """
     analyze_photo()
     clean_data_when_use_yolo()
