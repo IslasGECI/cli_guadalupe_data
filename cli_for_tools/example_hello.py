@@ -27,14 +27,30 @@ def make_data_map_of_traps_jpg():
     os.system(command)
 
 
+def update_ig_position_traps_map():
+    command = "docker rmi --force islasgeci/ig_position_traps_map && docker pull islasgeci/ig_position_traps_map"
+    os.system(command)
+
+
+def update_cat_recognition():
+    command = "docker rmi --force islasgeci/cat_recognition && docker pull islasgeci/cat_recognition"
+    os.system(command)
+
+
 @app.command()
 def say_hi(name: str):
     print(f"Hello {name}")
 
 
 @app.command()
-def good_bye(name: str = "Chato"):
-    print(f"Good bye {name}")
+def actualiza_imagenes():
+    """
+    Actualiza los comandos: \n
+    - `haz-mapa` \n
+    - `clasifica-fotos`
+    """
+    update_cat_recognition()
+    update_ig_position_traps_map()
 
 
 @app.command()
