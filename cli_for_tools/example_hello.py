@@ -1,7 +1,9 @@
 import os
 import typer
 
-app = typer.Typer(help="Awesome CLI user manager.")
+app = typer.Typer(
+    help="Paco el chato es el asistente para las tareas de gabinete en el proyecto de erradicación de gato feral en Isla Guadalupe"
+)
 
 
 def clean_data_when_use_yolo():
@@ -37,24 +39,24 @@ def good_bye(name: str = "Chato"):
 
 @app.command()
 def haz_mapa():
-    '''
+    """
     Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas. \n
     Requerimiento: En la carpeta de trabajo debe estar: \n
     - IG_POSICION_{fecha}.txt         : Archivo que obtenemos de mapsource \n
     - IG_POSICION_TRAMPAS_{fecha}.xlsx: Archivos con los esfuerzos de la semana \n
     Al final generará el archivo `map_of_traps.jpg`.
-    '''
+    """
     make_data_map_of_traps_jpg()
     clean_data_when_after_made_little_map()
 
 
 @app.command()
 def clasifica_fotos():
-    '''
+    """
     Clasifica las fotos que vienen de las trampas cámara. \n
     Requerimiento: En la carpeta de trabajo debe estar una carpeta (varias carpetas) con las fotos. \n
     Al final generará una carpeta con las fotos en las que detectó gato.
-    '''
+    """
     analyze_photo()
     clean_data_when_use_yolo()
 
