@@ -69,7 +69,7 @@ def clasifica_fotos():
     """
     Clasifica las fotos que vienen de las trampas cámara. \n
     Requerimiento: En la carpeta de trabajo debe estar una carpeta (varias carpetas) con las fotos. \n
-    El nombre de la carpeta principan debe ser sin espacios. Por ejemplo: \n
+    El nombre de la carpeta principal debe ser sin espacios. Por ejemplo: \n
     - `FOTOS GATOS`: es un nombre incorrecto, \n
     - `FOTOS_GATOS`: es un nombre correcto. \n
     Al final generará la carpeta `cat_detected` con las fotos en las que detectó gato.

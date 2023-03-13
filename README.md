@@ -26,11 +26,11 @@ Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas.
 Al final generará el archivo `map_of_traps.jpg`.
 
 ## `clasifica-fotos`
-Clasifica las fotos que vienen de las trampas cámara. \n
+Clasifica las fotos que vienen de las trampas cámara.
 **Requerimiento**: En la carpeta de trabajo debe estar una carpeta (varias carpetas) con las fotos.
-El nombre de la carpeta principan debe ser sin espacios. Por ejemplo: \n
-- `FOTOS GATOS`: es un nombre incorrecto, \n
-- `FOTOS_GATOS`: es un nombre correcto. \n
+El nombre de la carpeta principal debe ser sin espacios. Por ejemplo: \n
+- `FOTOS GATOS`: es un nombre incorrecto,
+- `FOTOS_GATOS`: es un nombre correcto.
 Al final generará la carpeta `cat_detected` con las fotos en las que detectó gato.
 
 ## `actualiza-comandos`
