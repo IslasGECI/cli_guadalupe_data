@@ -1,5 +1,6 @@
 import os
 import typer
+import cli_for_tools as ct
 
 app = typer.Typer(
     help="Paco el chato es el asistente para las tareas de gabinete en el proyecto de erradicación de gato feral en Isla Guadalupe"
@@ -33,7 +34,9 @@ def update_ig_position_traps_map():
 
 
 def update_cat_recognition():
-    command = "docker rmi --force islasgeci/cat_recognition && docker pull islasgeci/cat_recognition"
+    command = (
+        "docker rmi --force islasgeci/cat_recognition && docker pull islasgeci/cat_recognition"
+    )
     os.system(command)
 
 
@@ -78,6 +81,11 @@ def clasifica_fotos():
     """
     analyze_photo()
     clean_data_when_use_yolo()
+
+
+@app.command()
+def version():
+    print(ct.__version__)
 
 
 if __name__ == "__main__":
