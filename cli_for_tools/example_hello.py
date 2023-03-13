@@ -43,7 +43,7 @@ def say_hi(name: str):
 
 
 @app.command()
-def actualiza_imagenes():
+def actualiza_comandos():
     """
     Actualiza los comandos: \n
     - `haz-mapa` \n
