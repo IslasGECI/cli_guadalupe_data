@@ -41,11 +41,6 @@ def update_cat_recognition():
 
 
 @app.command()
-def say_hi(name: str):
-    print(f"Hello {name}")
-
-
-@app.command()
 def actualiza_comandos():
     """
     Actualiza los comandos: \n
