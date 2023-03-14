@@ -8,7 +8,7 @@ feral en Isla Guadalupe.
 Tiene tres habilidades:
 - clasificar fotos con gatos
 - generar un esbozo del mapa con trampas activas y desactivas de Isla Guadalupe
-- Actualizar la paquetería para hacr las tareas anteriores
+- actualizar la paquetería para hacer las tareas anteriores
 
 ## Modo de uso
 Para utilizar `haz-mapa` o `clasifica-fotos` debemos abrir la terminal desde la carpeta de trabajo:
@@ -20,17 +20,21 @@ Para utilizar `haz-mapa` o `clasifica-fotos` debemos abrir la terminal desde la 
 
 ## `haz-mapa`
 Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas.
+
 **Requerimiento**: En la carpeta de trabajo debe estar:
 - IG_POSICION_{fecha}.txt         : Archivo que obtenemos de mapsource
 - IG_POSICION_TRAMPAS_{fecha}.xlsx: Archivos con los esfuerzos de la semana
+
 Al final generará el archivo `map_of_traps.jpg`.
 
 ## `clasifica-fotos`
 Clasifica las fotos que vienen de las trampas cámara.
+
 **Requerimiento**: En la carpeta de trabajo debe estar una carpeta (varias carpetas) con las fotos.
-El nombre de la carpeta principal debe ser sin espacios. Por ejemplo: \n
+El nombre de la carpeta principal debe ser sin espacios. Por ejemplo:
 - `FOTOS GATOS`: es un nombre incorrecto,
 - `FOTOS_GATOS`: es un nombre correcto.
+
 Al final generará la carpeta `cat_detected` con las fotos en las que detectó gato.
 
 ## `actualiza-comandos`
