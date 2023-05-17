@@ -10,6 +10,12 @@ Tiene tres habilidades:
 - generar un esbozo del mapa con trampas activas y desactivas de Isla Guadalupe
 - actualizar la paquetería para hacer las tareas anteriores
 
+## Instalación 🏗️
+Podemos instalar esta aplicación usando `pip`:
+```shell
+pip install git+https://github.com/IslasGECI/cli_guadalupe_data
+```
+
 ## Modo de uso
 Para utilizar `haz-mapa` o `clasifica-fotos` debemos abrir la terminal desde la carpeta de trabajo:
 1. damos doble _click_ a la carpeta de trabajo
