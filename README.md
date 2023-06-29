@@ -13,7 +13,8 @@ Tiene tres habilidades:
 ## Instalación 🏗️
 Podemos instalar esta aplicación usando `pip`:
 ```shell
-pip install git+https://github.com/IslasGECI/cli_guadalupe_data
+pip uninstall cli_for_tools
+pip install git+https://github.com/IslasGECI/cli_guadalupe_data@latest
 ```
 
 ## Modo de uso
