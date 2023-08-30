@@ -14,7 +14,8 @@ def clean_data_when_use_yolo():
 
 
 def clean_data_when_after_made_little_map():
-    os.system("sudo chown --recursive $USER:$USER .")
+    os.system("sudo chown --recursive $USER .")
+    os.system("sudo chmod g+w --recursive .")
     os.system("echo ¿Qué borraremos?")
 
 
