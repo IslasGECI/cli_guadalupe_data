@@ -28,7 +28,8 @@ Para utilizar `haz-mapa` o `clasifica-fotos` debemos abrir la terminal desde la 
 ## `haz-mapa`
 Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas.
 
-**Requerimiento**: En la carpeta de trabajo debe estar:
+**Requerimientos** 
+En la carpeta de trabajo deben existir los archivos:
 - IG_POSICION_{fecha}.txt         : Archivo que obtenemos de mapsource
 - IG_POSICION_TRAMPAS_{fecha}.xlsx: Archivos con los esfuerzos de la semana
 
