@@ -13,8 +13,8 @@ Tiene tres habilidades:
 ## Instalación 🏗️
 Podemos instalar esta aplicación usando `pip`:
 ```shell
-pip uninstall cli_for_tools
-pip install git+https://github.com/IslasGECI/cli_guadalupe_data@latest
+pip uninstall cli-for-tools
+pip install cli-for-tools
 ```
 
 ## Modo de uso
@@ -30,18 +30,35 @@ Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas.
 
 ### Requerimientos
 En la carpeta de trabajo deben existir los archivos:
-- IG_POSICION_{fecha}.txt         : Archivo que obtenemos de mapsource
+- IG_MAPSOURCE_TRAMPAS_{fecha}.txt: Archivo que obtenemos de mapsource
 - IG_POSICION_TRAMPAS_{fecha}.xlsx: Archivos con los esfuerzos de la semana
 
+``` sh
+paco_el_chato haz-mapa
+```
+
 Al final generará el archivo `map_of_traps.jpg`.
+
+### Posibles fuentes de error
+Si las fechas no coinciden es posible que el mapa que generamos sea incorrecto.
+Si la fecha del archivo de mapsource está una semana atrás al de posición todas las trampas aparecerán desactivas.
+Por ejemplo, la `IG_POSICION_TRAMPAS_19NOV2023` y el archivo `IG_MAPSOURCE_TRAMPAS_12NOV2023.txt`. 
+Esto se debe a que a partir del archivo de MapSource generaremos un nuevo archivo excel con fecha de una semana después.
+Este archivo reescribe el original poniendo todas las trampas desactivas.
+
 
 ## `clasifica-fotos`
 Clasifica las fotos que vienen de las trampas cámara.
 
-**Requerimiento**: En la carpeta de trabajo debe estar una carpeta (varias carpetas) con las fotos.
+### Requerimientos
+En la carpeta de trabajo debe estar una carpeta (o varias carpetas) con las fotos.
 El nombre de la carpeta principal debe ser sin espacios. Por ejemplo:
 - `FOTOS GATOS`: es un nombre incorrecto,
 - `FOTOS_GATOS`: es un nombre correcto.
+
+``` sh
+paco_el_chato clasifica-fotos
+```
 
 Al final generará la carpeta `cat_detected` con las fotos en las que detectó gato.
 
