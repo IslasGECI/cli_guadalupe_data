@@ -42,8 +42,8 @@ Al final generará el archivo `map_of_traps.jpg`.
 ### Posibles fuentes de error
 Si las fechas no coinciden es posible que el mapa que generamos sea incorrecto.
 Si la fecha del archivo de MapSource está una semana atrás al de posición todas las trampas aparecerán desactivas.
-Por ejemplo, la `IG_POSICION_TRAMPAS_19NOV2023` y el archivo `IG_MAPSOURCE_TRAMPAS_12NOV2023.txt`. 
-Esto se debe a que a partir del archivo de MapSource generaremos un nuevo archivo excel con fecha de una semana después.
+Por ejemplo, con los archivos `IG_POSICION_TRAMPAS_19NOV2023` e `IG_MAPSOURCE_TRAMPAS_12NOV2023.txt` obtendremos un mapa con todas las trampas desactivadas. 
+Esto se debe a que a partir del archivo de MapSource generamos un nuevo archivo csv con fecha de una semana después.
 Este archivo reescribe el original poniendo todas las trampas desactivas.
 
 
