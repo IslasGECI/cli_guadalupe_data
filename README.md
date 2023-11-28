@@ -30,7 +30,7 @@ Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas.
 
 ### Requerimientos
 En la carpeta de trabajo deben existir los archivos:
-- IG_MAPSOURCE_TRAMPAS_{fecha}.txt: Archivo que obtenemos de mapsource
+- IG_MAPSOURCE_TRAMPAS_{fecha}.txt: Archivo que obtenemos de MapSource
 - IG_POSICION_TRAMPAS_{fecha}.xlsx: Archivos con los esfuerzos de la semana
 
 ``` sh
@@ -41,7 +41,7 @@ Al final generará el archivo `map_of_traps.jpg`.
 
 ### Posibles fuentes de error
 Si las fechas no coinciden es posible que el mapa que generamos sea incorrecto.
-Si la fecha del archivo de mapsource está una semana atrás al de posición todas las trampas aparecerán desactivas.
+Si la fecha del archivo de MapSource está una semana atrás al de posición todas las trampas aparecerán desactivas.
 Por ejemplo, la `IG_POSICION_TRAMPAS_19NOV2023` y el archivo `IG_MAPSOURCE_TRAMPAS_12NOV2023.txt`. 
 Esto se debe a que a partir del archivo de MapSource generaremos un nuevo archivo excel con fecha de una semana después.
 Este archivo reescribe el original poniendo todas las trampas desactivas.
