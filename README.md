@@ -28,14 +28,14 @@ Para utilizar `haz-mapa` o `clasifica-fotos` debemos abrir la terminal desde la 
 ## `haz-mapa`
 Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas.
 
+``` sh
+paco_el_chato haz-mapa
+```
+
 ### Requerimientos
 En la carpeta de trabajo deben existir los archivos:
 - IG_MAPSOURCE_TRAMPAS_{fecha}.txt: Archivo que obtenemos de MapSource
 - IG_POSICION_TRAMPAS_{fecha}.xlsx: Archivos con los esfuerzos de la semana
-
-``` sh
-paco_el_chato haz-mapa
-```
 
 Al final generará el archivo `map_of_traps.jpg`.
 
@@ -50,15 +50,16 @@ Este archivo reescribe el original poniendo todas las trampas desactivas.
 ## `clasifica-fotos`
 Clasifica las fotos que vienen de las trampas cámara.
 
+``` sh
+paco_el_chato clasifica-fotos
+```
+
 ### Requerimientos
 En la carpeta de trabajo debe estar una carpeta (o varias carpetas) con las fotos.
 El nombre de la carpeta principal debe ser sin espacios. Por ejemplo:
 - `FOTOS GATOS`: es un nombre incorrecto,
 - `FOTOS_GATOS`: es un nombre correcto.
 
-``` sh
-paco_el_chato clasifica-fotos
-```
 
 Al final generará la carpeta `cat_detected` con las fotos en las que detectó gato.
 
