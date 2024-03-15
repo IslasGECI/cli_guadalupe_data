@@ -1,6 +1,9 @@
 <a href="https://www.islas.org.mx/"><img src="https://www.islas.org.mx/img/logo.svg" align="right" width="256" /></a>
 # Cli Guadalupe Data
 
+
+![demo](https://github.com/IslasGECI/kanban/assets/53709062/faed1c14-9a41-4125-8140-fa58c3910cd2)
+
 ## `paco_el_chato`
 Paco el chato es el asistente para las tareas de gabinete en el proyecto de erradicación de gato
 feral en Isla Guadalupe.
