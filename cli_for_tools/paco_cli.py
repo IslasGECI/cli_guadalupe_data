@@ -9,8 +9,14 @@ app = typer.Typer(
 
 def clean_data_when_use_yolo():
     os.system("sudo chown --recursive $USER:$USER .")
-    os.system("rm --force --recursive raw")
-    os.system("rm --force --recursive resized")
+    os.system("rm --force cat_detected/*.txt")
+    os.system("rm --force --recursive camera_trap_photos/")
+
+
+def setup_classifier():
+    os.system("mkdir camera_trap_photos")
+    os.system("cp *.* camera_trap_photos/")
+    os.system("rm --recursive cat_detected/")
 
 
 def clean_data_when_after_made_little_map():
@@ -20,7 +26,7 @@ def clean_data_when_after_made_little_map():
 
 
 def analyze_photo():
-    command = "docker run -itv $PWD:/workdir/data/raw/photos -v $PWD:/workdir/data islasgeci/cat_recognition:latest make detection_with_yolo"
+    command = "docker run --volume $PWD:/workdir islasgeci/cetys_cat_recognition:latest make classification"
     os.system(command)
 
 
@@ -75,6 +81,7 @@ def clasifica_fotos():
     - `FOTOS_GATOS`: es un nombre correcto. \n
     Al final generará la carpeta `cat_detected` con las fotos en las que detectó gato.
     """
+    setup_classifier()
     analyze_photo()
     clean_data_when_use_yolo()
 
