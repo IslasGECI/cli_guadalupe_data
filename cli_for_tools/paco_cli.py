@@ -1,5 +1,6 @@
 import os
 import typer
+from typing_extensions import Annotated
 import cli_for_tools as ct
 
 app = typer.Typer(
@@ -30,11 +31,6 @@ def analyze_photo():
     os.system(command)
 
 
-def make_data_map_of_traps_jpg():
-    command = "docker run -v $PWD:/workdir/data islasgeci/ig_position_traps_map make data/map_of_traps.jpg"
-    os.system(command)
-
-
 def update_ig_position_traps_map():
     command = "docker rmi --force islasgeci/ig_position_traps_map && docker pull islasgeci/ig_position_traps_map"
     os.system(command)
@@ -59,7 +55,10 @@ def actualiza_comandos():
 
 
 @app.command()
-def haz_mapa():
+def haz_mapa(
+    positions_path: Annotated[str, typer.Argument()],
+    mapsource_path: Annotated[str, typer.Argument()],
+):
     """
     Hace un esbozo del mapa de Isla Guadalupe con las trampas activas e inactivas. \n
     Requerimiento: En la carpeta de trabajo debe estar: \n
@@ -67,7 +66,8 @@ def haz_mapa():
     - IG_POSICION_TRAMPAS_{fecha}.xlsx: Archivos con los esfuerzos de la semana \n
     Al final generará el archivo `map_of_traps.jpg`.
     """
-    make_data_map_of_traps_jpg()
+    command = f"docker run -v $PWD:/workdir/data islasgeci/ig_position_traps_map make data/map_of_traps.jpg positions_this_week={positions_path} mapsource_path={mapsource_path}"
+    os.system(command)
     clean_data_when_after_made_little_map()
 
 
