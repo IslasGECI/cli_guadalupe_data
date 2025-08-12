@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 
+## [0.3.0] - 2025-08-12
+### Changed
+- The command `haz-mapa` now requires the position and mapsource file paths.
+
 ## [0.2.0] - 2024-05-31
 
 ### Changed
