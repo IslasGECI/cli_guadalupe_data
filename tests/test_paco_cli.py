@@ -16,6 +16,6 @@ def test_app():
 
 
 def test_version():
-    expected = "0.3.0"
+    expected = "0.3.1"
     obtained = ct.__version__
     assert expected == obtained

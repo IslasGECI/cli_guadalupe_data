@@ -1,6 +1,6 @@
 import os
 import typer
-from typing_extensions import Annotated
+from typing import Annotated
 import cli_for_tools as ct
 
 app = typer.Typer(
