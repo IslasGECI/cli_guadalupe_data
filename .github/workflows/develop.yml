@@ -30,10 +30,10 @@ jobs:
       run: docker push islasgeci/cli_guadalupe_data:latest
     - name: Sube sha a Docker Hub
       run: docker push islasgeci/cli_guadalupe_data:${GITHUB_SHA:0:4}
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v1
+    - name: Set up Python 3.X
+      uses: actions/setup-python@v6
       with:
-        python-version: 3.9
+        python-version: "3.x"
     - name: Install pypa/build
       run: >-
         python -m
